@@ -62,7 +62,12 @@ int main() {
             std::cout << "Total Count: "; std::cin >> total;
             bookManager.addBook(Book(bookId, title, author, total, total));
             std::cout << "Book added.\n";
-        }
+        }else if (choice == 5) { // AI推荐
+    auto recs = AIRecommend::recommendBooks(user->username, "auto");
+    std::cout << "为你推荐图书：" << std::endl;
+    for (const auto& b : recs)
+        std::cout << b.id << " | " << b.title << " | " << b.author << std::endl;
+}
     } while (choice != 0);
 
     userManager.save("data/users.txt");
