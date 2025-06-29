@@ -1,3 +1,4 @@
+//用之前捏忘了设置api key在命令行  export DEEPSEEK_API_KEY=sk-xxxxxxx
 import sys
 import json
 import requests
