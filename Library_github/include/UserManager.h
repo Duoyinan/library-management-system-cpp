@@ -1,41 +1,96 @@
 #pragma once
-#include "User.h"
 #include <vector>
+#include <string>
 #include <fstream>
+#include <sstream>
+#include <algorithm>
+
+enum class Role { Reader, Admin };
+
+struct User {
+    std::string userId;
+    std::string username;
+    std::string password;
+    Role role;
+    bool isVIP;
+    double balance;
+    User() : isVIP(false), balance(0.0) {}
+    User(const std::string& id, const std::string& name, const std::string& pwd, Role r, bool vip = false, double bal = 0.0)
+        : userId(id), username(name), password(pwd), role(r), isVIP(vip), balance(bal) {}
+};
 
 class UserManager {
 public:
     std::vector<User> users;
 
+    UserManager() {
+        // 保证至少有一个管理员
+        if (users.empty()) {
+            users.push_back(User("A001", "admin", "123456", Role::Admin, false, 0.0));
+        }
+    }
     void load(const std::string& filename) {
         users.clear();
         std::ifstream fin(filename);
+        if (!fin.is_open()) return;
         std::string line;
         while (getline(fin, line)) {
-            users.push_back(User::fromString(line));
+            std::istringstream iss(line);
+            std::string id, name, pwd, r, vip, bal;
+            getline(iss, id, ',');
+            getline(iss, name, ',');
+            getline(iss, pwd, ',');
+            getline(iss, r, ',');
+            getline(iss, vip, ',');
+            getline(iss, bal, ',');
+            Role role = (r == "Admin") ? Role::Admin : Role::Reader;
+            bool isVIP = (vip == "1");
+            double balance = bal.empty() ? 0.0 : std::stod(bal);
+            users.emplace_back(id, name, pwd, role, isVIP, balance);
         }
         fin.close();
+        // 保证至少有一个管理员
+        bool hasAdmin = false;
+        for (auto& u : users) {
+            if (u.role == Role::Admin) hasAdmin = true;
+        }
+        if (!hasAdmin) users.push_back(User("A001", "admin", "123456", Role::Admin, false, 0.0));
     }
-
     void save(const std::string& filename) {
         std::ofstream fout(filename);
         for (const auto& u : users) {
-            fout << u.toString() << std::endl;
+            fout << u.userId << "," << u.username << "," << u.password << "," 
+                << (u.role == Role::Admin ? "Admin" : "Reader") << ","
+                << (u.isVIP ? "1" : "0") << ","
+                << u.balance << "\n";
         }
         fout.close();
     }
-
-    bool registerUser(const std::string& id, const std::string& name, const std::string& pwd, Role r) {
-        for (const auto& u : users) if (u.username == name) return false;
-        users.emplace_back(id, name, pwd, r);
+    User* login(const std::string& username, const std::string& password, Role role) {
+        for (auto& u : users) {
+            if (u.username == username && u.password == password && u.role == role) return &u;
+        }
+        return nullptr;
+    }
+    bool addUser(const std::string& username, const std::string& password, Role role, bool vip = false) {
+        for (const auto& u : users) {
+            if (u.username == username && u.role == role) return false;
+        }
+        std::string id = (role == Role::Admin ? "A" : "U") + std::to_string(1000 + users.size());
+        users.emplace_back(id, username, password, role, vip, 0.0);
         return true;
     }
-
-    User* login(const std::string& name, const std::string& pwd) {
-        for (auto& u : users) {
-            if (u.username == name && u.password == pwd)
-                return &u;
+    bool removeUser(const std::string& userId) {
+        auto it = std::remove_if(users.begin(), users.end(), [&](const User& u){ return u.userId == userId; });
+        if (it != users.end()) {
+            users.erase(it, users.end());
+            return true;
         }
+        return false;
+    }
+    User* findById(const std::string& userId) {
+        for (auto& u : users)
+            if (u.userId == userId) return &u;
         return nullptr;
     }
 };
