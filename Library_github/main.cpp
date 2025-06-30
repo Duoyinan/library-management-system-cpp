@@ -3,7 +3,7 @@
 #include "BorrowManager.h"
 #include <iostream>
 #include <string>
-
+#include "AIRecommend.h"
 int main() {
     UserManager userManager;
     BookManager bookManager;
