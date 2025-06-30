@@ -2,30 +2,30 @@
 #include <string>
 #include <iostream>
 
-enum class Role { User, Admin };
-
-class User {
+class Book {
 public:
-    std::string userId;
-    std::string username;
-    std::string password;
-    Role role;
+    std::string bookId;
+    std::string title;
+    std::string author;
+    int totalCount;
+    int availableCount;
 
-    User() = default;
-    User(const std::string& id, const std::string& name, const std::string& pwd, Role r)
-        : userId(id), username(name), password(pwd), role(r) {}
+    Book() = default;
+    Book(const std::string& id, const std::string& t, const std::string& a, int total, int avail)
+        : bookId(id), title(t), author(a), totalCount(total), availableCount(avail) {}
 
     std::string toString() const {
-        return userId + "," + username + "," + password + "," + std::to_string(static_cast<int>(role));
+        return bookId + "," + title + "," + author + "," + std::to_string(totalCount) + "," + std::to_string(availableCount);
     }
 
-    static User fromString(const std::string& s) {
-        User u;
-        size_t pos1 = s.find(','), pos2 = s.find(',', pos1 + 1), pos3 = s.find(',', pos2 + 1);
-        u.userId = s.substr(0, pos1);
-        u.username = s.substr(pos1 + 1, pos2 - pos1 - 1);
-        u.password = s.substr(pos2 + 1, pos3 - pos2 - 1);
-        u.role = (s.substr(pos3 + 1) == "1") ? Role::Admin : Role::User;
-        return u;
+    static Book fromString(const std::string& s) {
+        Book b;
+        size_t p1 = s.find(','), p2 = s.find(',', p1 + 1), p3 = s.find(',', p2 + 1), p4 = s.find(',', p3 + 1);
+        b.bookId = s.substr(0, p1);
+        b.title = s.substr(p1 + 1, p2 - p1 - 1);
+        b.author = s.substr(p2 + 1, p3 - p2 - 1);
+        b.totalCount = std::stoi(s.substr(p3 + 1, p4 - p3 - 1));
+        b.availableCount = std::stoi(s.substr(p4 + 1));
+        return b;
     }
 };
