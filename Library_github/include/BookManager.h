@@ -8,7 +8,7 @@
 #include <iomanip>
 #include <sstream>
 #include <stdexcept>
-
+#include "BookManager.h"
 struct BorrowRecord {
     std::string recordId;
     std::string userId;
