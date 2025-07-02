@@ -5,8 +5,6 @@
 #include <fstream>
 #include <ctime>
 
-static BorrowRecord fromString(const std::string& line);
-std::string toString() const;
 
 class BorrowManager {
 public:
