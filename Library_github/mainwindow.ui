@@ -1,0 +1,1769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1122</width>
+    <height>865</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget_main" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>1101</width>
+      <height>811</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#widget_main{
+background-color: rgb(14, 142, 231);
+}</string>
+    </property>
+    <widget class="QPushButton" name="btn_head">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:none;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>81</width>
+       <height>81</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_close">
+     <property name="geometry">
+      <rect>
+       <x>1070</x>
+       <y>0</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#btn_close{
+border:none;
+}
+#btn_close:hover{
+	background-color: rgb(240, 240, 240);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/res/close.png</normaloff>:/res/close.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_min">
+     <property name="geometry">
+      <rect>
+       <x>1040</x>
+       <y>0</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#btn_min{
+border:none;
+}
+#btn_min:hover{
+	background-color: rgb(240, 240, 240);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/res/res.png</normaloff>:/res/res.png</iconset>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lb_user">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>20</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>方正舒体</family>
+       <pointsize>16</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Admin</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lb_signature">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>60</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(200, 200, 210);</string>
+     </property>
+     <property name="text">
+      <string>V0.0.1</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="tb_books">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>10</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QToolButton{
+border:none;
+color: rgb(255, 255, 255);
+}
+
+QToolButton:hover{
+color: rgb(206, 152, 250);
+}
+
+QToolButton:pressed{
+color: rgb(255, 102, 81);
+}</string>
+     </property>
+     <property name="text">
+      <string>所有图书</string>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/res/books1.png</normaloff>:/res/books1.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>64</width>
+       <height>56</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="tb_in">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>10</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QToolButton{
+border:none;
+color: rgb(255, 255, 255);
+}
+
+QToolButton:hover{
+color: rgb(206, 152, 250);
+}
+
+QToolButton:pressed{
+color: rgb(255, 102, 81);
+}</string>
+     </property>
+     <property name="text">
+      <string>图书入库</string>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/res/space.png</normaloff>:/res/space.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>64</width>
+       <height>56</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="tb_reg">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>10</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QToolButton{
+border:none;
+color: rgb(255, 255, 255);
+}
+
+QToolButton:hover{
+color: rgb(206, 152, 250);
+}
+
+QToolButton:pressed{
+color: rgb(255, 102, 81);
+}</string>
+     </property>
+     <property name="text">
+      <string>办理借阅</string>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/res/reg.png</normaloff>:/res/reg.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>64</width>
+       <height>56</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="tb_log">
+     <property name="geometry">
+      <rect>
+       <x>820</x>
+       <y>10</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QToolButton{
+border:none;
+color: rgb(255, 255, 255);
+}
+
+QToolButton:hover{
+color: rgb(206, 152, 250);
+}
+
+QToolButton:pressed{
+color: rgb(255, 102, 81);
+}</string>
+     </property>
+     <property name="text">
+      <string>借阅记录</string>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/res/history.png</normaloff>:/res/history.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>64</width>
+       <height>56</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>101</y>
+       <width>1101</width>
+       <height>711</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="currentIndex">
+      <number>4</number>
+     </property>
+     <widget class="QWidget" name="page_books">
+      <widget class="QPushButton" name="btn_query">
+       <property name="geometry">
+        <rect>
+         <x>740</x>
+         <y>15</y>
+         <width>171</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#btn_query{
+border:1px solid rgb(0, 112, 249);
+color: rgb(255, 255, 255);
+border-radius:4px;
+background-color: rgb(0, 112, 249);
+}
+
+#btn_query:hover{
+border:1px solid rgb(0, 128, 0);
+background-color: rgb(0, 128, 0);
+}
+#btn_query:press{
+border:1px solid rgb(0, 112, 249);
+background-color: rgb(0, 112, 249);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>图书查询</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/res/up.png</normaloff>:/res/up.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QTableView" name="tv_book">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>1081</width>
+         <height>631</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid rgb(110,220,255);</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="ed_title_query">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>15</y>
+         <width>721</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>书名</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_export">
+       <property name="geometry">
+        <rect>
+         <x>920</x>
+         <y>15</y>
+         <width>171</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+border:1px solid rgb(0, 112, 249);
+color: rgb(255, 255, 255);
+border-radius:4px;
+background-color: rgb(0, 112, 249);
+}
+
+QPushButton:hover{
+border:1px solid rgb(0, 128, 0);
+background-color: rgb(0, 128, 0);
+}
+QPushButton:press{
+border:1px solid rgb(0, 112, 249);
+background-color: rgb(0, 112, 249);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>数据导出</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/res/up.png</normaloff>:/res/up.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_share">
+      <widget class="QPushButton" name="btn_in">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>560</y>
+         <width>150</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#btn_in{
+border:1px solid rgb(0, 112, 249);
+color: rgb(255, 255, 255);
+border-radius:4px;
+background-color: rgb(0, 112, 249);
+}
+
+#btn_in:hover{
+border:1px solid rgb(0, 128, 0);
+background-color: rgb(0, 128, 0);
+}
+#btn_in:press{
+border:1px solid rgb(0, 112, 249);
+background-color: rgb(0, 112, 249);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>入  库</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="ed_title_in">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>220</y>
+         <width>260</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+       </property>
+       <property name="placeholderText">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="ed_author">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>300</y>
+         <width>260</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+       </property>
+       <property name="placeholderText">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_21">
+       <property name="geometry">
+        <rect>
+         <x>141</x>
+         <y>226</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>书名：</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_22">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>300</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>作者：</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_23">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>375</y>
+         <width>161</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>出版时间：</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_24">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>450</y>
+         <width>161</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>出版单位：</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="ed_pbulisher">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>450</y>
+         <width>260</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+       </property>
+       <property name="placeholderText">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_25">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>220</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>数量：</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="ed_stock_in">
+       <property name="geometry">
+        <rect>
+         <x>720</x>
+         <y>220</y>
+         <width>260</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+       </property>
+       <property name="placeholderText">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_26">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>299</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>单价：</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="ed_unit_price">
+       <property name="geometry">
+        <rect>
+         <x>720</x>
+         <y>298</y>
+         <width>260</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+       </property>
+       <property name="placeholderText">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_27">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>383</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>价格：</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="ed_price">
+       <property name="geometry">
+        <rect>
+         <x>720</x>
+         <y>378</y>
+         <width>260</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+       </property>
+       <property name="placeholderText">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_16">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>60</y>
+         <width>391</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>40</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(110, 137, 255);</string>
+       </property>
+       <property name="text">
+        <string>图 书 入 库</string>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="dateEdit">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>378</y>
+         <width>260</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid rgb(110,220,255);</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_record">
+      <widget class="QPushButton" name="btn_out">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>530</y>
+         <width>150</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#btn_out{
+border:1px solid rgb(0, 112, 249);
+color: rgb(255, 255, 255);
+border-radius:4px;
+background-color: rgb(0, 112, 249);
+}
+
+#btn_out:hover{
+border:1px solid rgb(0, 128, 0);
+background-color: rgb(0, 128, 0);
+}
+#btn_out:press{
+border:1px solid rgb(0, 112, 249);
+background-color: rgb(0, 112, 249);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>报  损</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_28">
+       <property name="geometry">
+        <rect>
+         <x>291</x>
+         <y>286</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>书名：</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_29">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>370</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>数量：</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_17">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>70</y>
+         <width>391</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>40</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(110, 137, 255);</string>
+       </property>
+       <property name="text">
+        <string>图 书 报 损</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="ed_title_out">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>280</y>
+         <width>260</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+       </property>
+       <property name="placeholderText">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="ed_stock_out">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>370</y>
+         <width>260</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+       </property>
+       <property name="placeholderText">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_bin">
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>华文新魏</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(171, 198, 255);</string>
+       </property>
+       <property name="text">
+        <string>借阅管理</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>170</y>
+         <width>531</width>
+         <height>531</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>借书</string>
+       </property>
+       <widget class="QLineEdit" name="ed_tel_log_out">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>120</y>
+          <width>260</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_30">
+        <property name="geometry">
+         <rect>
+          <x>101</x>
+          <y>46</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>姓名：</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_33">
+        <property name="geometry">
+         <rect>
+          <x>101</x>
+          <y>126</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>电话：</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ed_name_log_out">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>40</y>
+          <width>260</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ed_book_log_out">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>280</y>
+          <width>260</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_32">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>286</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>图书：</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_31">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>206</y>
+          <width>111</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>性别：</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ed_sex_log_out">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>200</y>
+          <width>260</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_34">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>366</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>押金：</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ed_crash">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>360</y>
+          <width>260</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_log_out">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>460</y>
+          <width>150</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#btn_log_out{
+border:1px solid rgb(0, 112, 249);
+color: rgb(255, 255, 255);
+border-radius:4px;
+background-color: rgb(0, 112, 249);
+}
+
+#btn_log_out:hover{
+border:1px solid rgb(0, 128, 0);
+background-color: rgb(0, 128, 0);
+}
+#btn_log_out:press{
+border:1px solid rgb(0, 112, 249);
+background-color: rgb(0, 112, 249);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>借  阅</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>170</y>
+         <width>531</width>
+         <height>531</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>还书</string>
+       </property>
+       <widget class="QLineEdit" name="ed_tel_log_in">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>120</y>
+          <width>260</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_40">
+        <property name="geometry">
+         <rect>
+          <x>81</x>
+          <y>46</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>姓名：</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_41">
+        <property name="geometry">
+         <rect>
+          <x>81</x>
+          <y>126</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>电话：</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ed_name_in">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>40</y>
+          <width>260</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ed_book_log_in">
+        <property name="geometry">
+         <rect>
+          <x>201</x>
+          <y>200</y>
+          <width>260</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_42">
+        <property name="geometry">
+         <rect>
+          <x>81</x>
+          <y>206</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>图书：</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_log_in">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>460</y>
+          <width>150</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#btn_log_in{
+border:1px solid rgb(0, 112, 249);
+color: rgb(255, 255, 255);
+border-radius:4px;
+background-color: rgb(0, 112, 249);
+}
+
+#btn_log_in:hover{
+border:1px solid rgb(0, 128, 0);
+background-color: rgb(0, 128, 0);
+}
+#btn_log_in:press{
+border:1px solid rgb(0, 112, 249);
+background-color: rgb(0, 112, 249);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>归  还</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>1071</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>续借</string>
+       </property>
+       <widget class="QComboBox" name="cb_renew">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>881</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;
+font: 18pt &quot;宋体&quot;;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_renew">
+        <property name="geometry">
+         <rect>
+          <x>900</x>
+          <y>30</y>
+          <width>150</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+border:1px solid rgb(0, 112, 249);
+color: rgb(255, 255, 255);
+border-radius:4px;
+background-color: rgb(0, 112, 249);
+}
+
+QPushButton:hover{
+border:1px solid rgb(0, 128, 0);
+background-color: rgb(0, 128, 0);
+}
+QPushButton:press{
+border:1px solid rgb(0, 112, 249);
+background-color: rgb(0, 112, 249);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>续  借</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_set">
+      <widget class="QTableView" name="tv_log">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>1081</width>
+         <height>631</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid rgb(110,220,255);</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="ed_tel_query">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>15</y>
+         <width>901</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>电话</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_tel_query">
+       <property name="geometry">
+        <rect>
+         <x>919</x>
+         <y>15</y>
+         <width>171</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#btn_tel_query{
+border:1px solid rgb(0, 112, 249);
+color: rgb(255, 255, 255);
+border-radius:4px;
+background-color: rgb(0, 112, 249);
+}
+
+#btn_tel_query:hover{
+border:1px solid rgb(0, 128, 0);
+background-color: rgb(0, 128, 0);
+}
+#btn_tel_query:press{
+border:1px solid rgb(0, 112, 249);
+background-color: rgb(0, 112, 249);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>图书查询</string>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/res/up.png</normaloff>:/res/up.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_chart">
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1101</width>
+         <height>711</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>Tab 1</string>
+        </attribute>
+        <widget class="QWidget" name="widget_bar" native="true">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>1061</width>
+           <height>641</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(151, 175, 255);</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_2">
+        <attribute name="title">
+         <string>Tab 2</string>
+        </attribute>
+        <widget class="QWidget" name="widget_pie" native="true">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>1061</width>
+           <height>641</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(151, 175, 255);</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QToolButton" name="tb_del">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>10</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QToolButton{
+border:none;
+color: rgb(255, 255, 255);
+}
+
+QToolButton:hover{
+color: rgb(206, 152, 250);
+}
+
+QToolButton:pressed{
+color: rgb(255, 102, 81);
+}</string>
+     </property>
+     <property name="text">
+      <string>图书报损</string>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/res/recycle.png</normaloff>:/res/recycle.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>64</width>
+       <height>56</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="tb_chart">
+     <property name="geometry">
+      <rect>
+       <x>950</x>
+       <y>10</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QToolButton{
+border:none;
+color: rgb(255, 255, 255);
+}
+
+QToolButton:hover{
+color: rgb(206, 152, 250);
+}
+
+QToolButton:pressed{
+color: rgb(255, 102, 81);
+}</string>
+     </property>
+     <property name="text">
+      <string>可视化</string>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/res/chart.png</normaloff>:/res/chart.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>60</width>
+       <height>56</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormUser</class>
+ <widget class="QWidget" name="FormUser">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1143</width>
+    <height>759</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>200</width>
+     <height>750</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#widget{
+	background-color: rgb(48, 138, 199);
+}</string>
+   </property>
+   <widget class="QLabel" name="lb_user">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>130</y>
+      <width>200</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>方正舒体</family>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Admin</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_head">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>30</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="res.qrc">
+      <normaloff>:/res/books1.png</normaloff>:/res/books1.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>81</width>
+      <height>81</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_bar_query">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>200</y>
+      <width>200</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: rgb(48, 138, 199);
+    color: white;
+    border-style: outset;
+    border-width: 0px;
+    border-color: beige;
+	font: 14pt &quot;幼圆&quot;;
+}
+QPushButton:hover {
+    background-color: rgb(58, 181, 251);
+}
+QPushButton:pressed {
+    background-color: #005CA3;
+}</string>
+    </property>
+    <property name="text">
+     <string>图书查询</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_bar_lend">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>260</y>
+      <width>200</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: rgb(48, 138, 199);
+    color: white;
+    border-style: outset;
+    border-width: 0px;
+    border-color: beige;
+	font: 14pt &quot;幼圆&quot;;
+}
+QPushButton:hover {
+    background-color: rgb(58, 181, 251);
+}
+QPushButton:pressed {
+    background-color: #005CA3;
+}</string>
+    </property>
+    <property name="text">
+     <string>图书借阅</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_bar_me">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>320</y>
+      <width>200</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: rgb(48, 138, 199);
+    color: white;
+    border-style: outset;
+    border-width: 0px;
+    border-color: beige;
+	font: 14pt &quot;幼圆&quot;;
+}
+QPushButton:hover {
+    background-color: rgb(58, 181, 251);
+}
+QPushButton:pressed {
+    background-color: #005CA3;
+}</string>
+    </property>
+    <property name="text">
+     <string>我的借阅</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_bar_logout">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>380</y>
+      <width>200</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: rgb(48, 138, 199);
+    color: white;
+    border-style: outset;
+    border-width: 0px;
+    border-color: beige;
+	font: 14pt &quot;幼圆&quot;;
+}
+QPushButton:hover {
+    background-color: rgb(58, 181, 251);
+}
+QPushButton:pressed {
+    background-color: #005CA3;
+}</string>
+    </property>
+    <property name="text">
+     <string>注销用户</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_bar_exit">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>440</y>
+      <width>200</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: rgb(48, 138, 199);
+    color: white;
+    border-style: outset;
+    border-width: 0px;
+    border-color: beige;
+	font: 14pt &quot;幼圆&quot;;
+}
+QPushButton:hover {
+    background-color: rgb(58, 181, 251);
+}
+QPushButton:pressed {
+    background-color: #005CA3;
+}</string>
+    </property>
+    <property name="text">
+     <string>退出系统</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>0</y>
+     <width>941</width>
+     <height>750</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+   </property>
+   <property name="currentIndex">
+    <number>3</number>
+   </property>
+   <widget class="QWidget" name="page_books">
+    <widget class="QPushButton" name="btn_query">
+     <property name="geometry">
+      <rect>
+       <x>759</x>
+       <y>150</y>
+       <width>171</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#btn_query{
+border:1px solid rgb(0, 112, 249);
+color: rgb(255, 255, 255);
+border-radius:4px;
+background-color: rgb(0, 112, 249);
+}
+
+#btn_query:hover{
+border:1px solid rgb(0, 128, 0);
+background-color: rgb(0, 128, 0);
+}
+#btn_query:press{
+border:1px solid rgb(0, 112, 249);
+background-color: rgb(0, 112, 249);
+}
+</string>
+     </property>
+     <property name="text">
+      <string>图书查询</string>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/res/up.png</normaloff>:/res/up.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tv_book">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>205</y>
+       <width>921</width>
+       <height>531</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:1px solid rgb(110,220,255);</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ed_title_query">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>741</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+     </property>
+     <property name="placeholderText">
+      <string>书名</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>941</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>40</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(110, 137, 255);</string>
+     </property>
+     <property name="text">
+      <string>图 书 查 询</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_1"/>
+   <widget class="QWidget" name="page_2"/>
+   <widget class="QWidget" name="page_lend">
+    <widget class="QPushButton" name="btn_log_out">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>454</y>
+       <width>150</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#btn_log_out{
+border:1px solid rgb(0, 112, 249);
+color: rgb(255, 255, 255);
+border-radius:4px;
+background-color: rgb(0, 112, 249);
+}
+
+#btn_log_out:hover{
+border:1px solid rgb(0, 128, 0);
+background-color: rgb(0, 128, 0);
+}
+#btn_log_out:press{
+border:1px solid rgb(0, 112, 249);
+background-color: rgb(0, 112, 249);
+}
+</string>
+     </property>
+     <property name="text">
+      <string>借  阅</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_34">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>340</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>押金：</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ed_crash">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>334</y>
+       <width>260</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ed_book_log_out">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>234</y>
+       <width>260</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_32">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>240</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>图书：</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>941</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>40</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(110, 137, 255);</string>
+     </property>
+     <property name="text">
+      <string>图 书 借 阅</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_me">
+    <widget class="QTableView" name="tv_log">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>205</y>
+       <width>921</width>
+       <height>531</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:1px solid rgb(110,220,255);</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ed_log_name">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>421</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:1px solid rgb(110,220,255);
+border-radius:3px;</string>
+     </property>
+     <property name="placeholderText">
+      <string>名称</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_log_query">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>150</y>
+       <width>171</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border:1px solid rgb(0, 112, 249);
+color: rgb(255, 255, 255);
+border-radius:4px;
+background-color: rgb(0, 112, 249);
+}
+
+QPushButton:hover{
+border:1px solid rgb(0, 128, 0);
+background-color: rgb(0, 128, 0);
+}
+QPushButton:press{
+border:1px solid rgb(0, 112, 249);
+background-color: rgb(0, 112, 249);
+}
+</string>
+     </property>
+     <property name="text">
+      <string>借阅查询</string>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/res/up.png</normaloff>:/res/up.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>941</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>40</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(110, 137, 255);</string>
+     </property>
+     <property name="text">
+      <string>我 的 借 阅</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_return">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>150</y>
+       <width>171</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border:1px solid rgb(39, 185, 209);
+color: rgb(255, 255, 255);
+border-radius:4px;
+background-color: rgb(39, 185, 209);
+}
+
+QPushButton:hover{
+border:1px solid rgb(0, 128, 0);
+background-color: rgb(0, 128, 0);
+}
+QPushButton:press{
+border:1px solid rgb(0, 112, 249);
+background-color: rgb(0, 112, 249);
+}
+</string>
+     </property>
+     <property name="text">
+      <string>归还图书</string>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/res/recover.png</normaloff>:/res/recover.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_renew">
+     <property name="geometry">
+      <rect>
+       <x>800</x>
+       <y>150</y>
+       <width>131</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border:1px solid rgb(110, 137, 255);
+color: rgb(255, 255, 255);
+border-radius:4px;
+background-color: rgb(110, 137, 255);
+}
+
+QPushButton:hover{
+border:1px solid rgb(0, 128, 0);
+background-color: rgb(0, 128, 0);
+}
+QPushButton:press{
+border:1px solid rgb(0, 112, 249);
+background-color: rgb(0, 112, 249);
+}
+</string>
+     </property>
+     <property name="text">
+      <string>续借</string>
+     </property>
+     <property name="icon">
+      <iconset resource="res.qrc">
+       <normaloff>:/res/login.png</normaloff>:/res/login.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_3"/>
+  </widget>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
